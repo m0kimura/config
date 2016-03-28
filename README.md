@@ -1,10 +1,8 @@
 #UBUNTU Desktop & Server Setup & Configulation#
 
 ##手順##
-　1)"wget http://www.kmrweb.net/starter.sh"でスターターをダウンロード
-  2)cd config
-  3)./setup_base1.sh
-  4)./setup_desktop1.sh
+  1)cd config
+  2)./setup_base.sh
 
 ##ライブラリ##
   ・setup_bupiso.sh システム全体をISOでバックアップ
