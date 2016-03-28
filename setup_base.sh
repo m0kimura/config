@@ -45,7 +45,9 @@ sudo npm install -g forever
 sudo npm install -g express
 sudo npm install -g fibers
 sudo npm install -g stratifiedjs
+sudo chown ubuntu:ubuntu ~/tmp
 mkdir $HOME/nodejs
+
 
 # pause
 echo ### mongo db ###
