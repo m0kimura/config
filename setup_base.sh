@@ -30,12 +30,6 @@ sudo apt-get install nodejs npm
 sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 
 # pause
-echo ### git ###
-read -p "中間確認" y
-
-sudo apt-get install git
-
-# pause
 read -p "中間確認" y
 
 echo ### awscli ###
