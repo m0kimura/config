@@ -1,4 +1,7 @@
-#UBUNTU Desktop & Server Setup & Configulation#
+#UBUNTU
+
+Desktop & Server Setup & Configulation#
+Kmrweb Dot Net http://www.kmrweb.net/cloud/setup.html をご覧下さい。
 
 ##手順##
   1)cd config
