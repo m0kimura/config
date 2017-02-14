@@ -55,4 +55,23 @@ if [ "${x}" = "y" ] ; then
 fi
 
 
+read -p "atom 導入しますか? (y/n)" x
+if [ "${x}" = "y" ] ; then
+    echo ### Atom ###
+    sudo add-apt-repository ppa:webupd8team/atom
+    sudo apt-get update
+    sudo apt-get install atom
+fi
+
+
+read -p "Chrome 設定しますか? (y/n)" x
+if [ "${x}" = "y" ] ; then
+    echo ### Chrome ###
+    sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    sudo apt-get update
+    sudo apt-get install google-chrome-stable
+fi
+
+
 echo ### END ###
