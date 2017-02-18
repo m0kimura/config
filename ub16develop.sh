@@ -53,6 +53,14 @@ if [ "${x}" = "y" ] ; then
 fi
 
 
+read -p "メールアドレスを入力してください" x
+git config --global user.email $x
+
+read -p "名前を入力してください" x
+git config --global user.name $x
+
+git config --global push.default matching
+
 echo /##
 echo /##
 echo /## END ###
