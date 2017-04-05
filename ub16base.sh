@@ -68,6 +68,15 @@ mkdir $HOME/nodejs
 
 # pause
 echo /##
+echo /## docker
+echo /##
+read -p "中間確認" y
+sudo apt-get install docker.io
+sudo pip install -U docker-compose
+docker-compose --version
+
+# pause
+echo /##
 echo /## mongo db
 echo /##
 read -p "中間確認" y
