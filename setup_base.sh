@@ -6,14 +6,20 @@ if [ "${x}" != "y" ] ; then
   exit
 fi
 
-echo ### aptitude ###
+echo /##
+echo /## aptitude ###
+echo /##
 sudo apt-get install aptitude
 
-echo ### local time setting ###
+echo /##
+echo /## local time setting ###
+echo /##
 sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-echo ### japanese configration ###
+echo /##
+echo /## japanese configration ###
+echo /##
 sudo aptitude install locales
 sudo aptitude install language-pack-ja
 sudo dpkg-reconfigure locales
@@ -23,7 +29,9 @@ export LANG=ja_JP.UTF-8
 export LC_MESSAGES=ja_JP.UTF-8
 
 # pause
-echo ### nodejs ###
+echo /##
+echo /## nodejs ###
+echo /##
 read -p "中間確認" y
 
 sudo apt-get install nodejs npm
@@ -32,13 +40,17 @@ sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 # pause
 read -p "中間確認" y
 
-echo ### awscli ###
+echo /##
+echo /## awscli ###
+echo /##
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 sudo pip install awscli
 
 # pause
-echo ### nodejs basic ###
+echo /##
+echo /## nodejs basic ###
+echo /##
 read -p "中間確認" y
 
 sudo npm install -g forever
@@ -50,7 +62,9 @@ mkdir $HOME/nodejs
 
 
 # pause
-echo ### mongo db ###
+echo /##
+echo /## mongo db ###
+echo /##
 read -p "中間確認" y
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
@@ -60,4 +74,6 @@ sudo apt-get install -y mongodb-org
 sudo service mongod start
 sudo service mongod status
 
-echo ### end ###
+echo /##
+echo /##
+echo /## end ###
