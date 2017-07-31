@@ -37,9 +37,11 @@ if [ "${x}" = "y" ] ; then
     echo /##
     sudo add-apt-repository ppa:webupd8team/atom
     sudo apt-get update
-    sudo apt-get install -y atom schellcheck
+    sudo apt-get install -y atom schellcheck python3-pip
     git clone https://github.com/m0kimura/atom-packages.git packages
     sudo npm install eslint -g
+    pip3 install pep8
+    pip3 install autopep8
 fi
 
 read -p "Chrome 設定しますか? (y/n)" x
