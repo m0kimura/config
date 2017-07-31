@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 sudo apt-get install nodejs npm
 sudo npm install n -g
 sudo n 7.4.0
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo apt-get purge -y nodejs npm
-sudo npm install -g forever 
+sudo npm install -g forever
 
 read -p "cairo-dock 導入しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
@@ -37,7 +37,7 @@ if [ "${x}" = "y" ] ; then
     echo /##
     sudo add-apt-repository ppa:webupd8team/atom
     sudo apt-get update
-    sudo apt-get install atom
+    sudo apt-get install -y atom schellcheck
     git clone https://github.com/m0kimura/atom-packages.git packages
     sudo npm install eslint -g
 fi
