@@ -15,7 +15,7 @@ fi
 
 read -p "nodejs 導入しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### nodejs ###
+    echo "### nodejs ###"
     sudo apt-get install -y nodejs npm
     sudo npm cache clean
     sudo npm install n -g
@@ -28,7 +28,7 @@ fi
 
 read -p "python 導入しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### atom editor ###
+    echo "### atom editor ###"
     sudo apt-get install build-essential libncursesw5-dev &&
     libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev &&
     libssl-dev openssl libbz2-dev libreadline-dev
@@ -46,21 +46,21 @@ fi
 
 read -p "c, c++環境を設定しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### build-essentials ###
+    echo "### build-essentials ###"
     sudo apt-get install build-essentials
 fi
 
 
 read -p "Monaca CLI 環境を設定しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### Monaca CLI ###
+    echo "### Monaca CLI ###"
     sudo npm -g install monaca
 fi
 
 
 read -p "Cordova CLI 環境を設定しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### Cordova CLI ###
+    echo "### Cordova CLI ###"
     sudo npm -g install cordova
     cordova -v
     echo "export PATH=$PATH:~/android/sdk/tools/" >> ~/.bash_profile
@@ -73,7 +73,7 @@ fi
 
 read -p "Eclipse 環境を設定しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### Eclipse ###
+    echo "### Eclipse ###"
     cd ~/Downloads
     wget http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-java-luna-SR2-linux-gtk-x86_64.tar.gz
     wget http://osdn.jp/projects/mergedoc/downloads/61474/pleiades_1.5.0.zip
@@ -85,4 +85,4 @@ if [ "${x}" = "y" ] ; then
 fi
 
 
-echo ### END ###
+echo "### END ###"
