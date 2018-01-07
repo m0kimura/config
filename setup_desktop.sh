@@ -3,7 +3,7 @@
 ##
 read -p "JDK8 設定しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### JDK8 ###
+    echo "### JDK8 ###"
     sudo add-apt-repository ppa:webupd8team/java
     sudo apt-get update
     sudo apt-get install oracle-java8-installer
@@ -14,7 +14,7 @@ fi
 read -p "Mac Style 導入しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
 
-    echo ### MacUbuntu ###
+    echo "### MacUbuntu ###"
     wget http://drive.noobslab.com/data/Mac-13.10/MBuntu-Wallpapers.zip
 
   read -p "中間確認" x
@@ -34,7 +34,7 @@ fi
 
 read -p "cairo-dock 導入しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### Cairo-Dock ###
+    echo "### Cairo-Dock ###"
     sudo apt-add-repository ppa:cairo-dock-team/ppa
     sudo apt-get update
     sudo apt-get install cairo-dock cairo-dock-plug-ins
@@ -43,14 +43,14 @@ fi
 
 read -p "Chromium 設定しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### Chromium ###
+    echo "### Chromium ###"
     sudo apt-get install chromium-browser
 fi
 
 
 read -p "Docker 設定しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
-    echo ### Docker ###
+    echo "### Docker ###"
     sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -59,4 +59,4 @@ if [ "${x}" = "y" ] ; then
     sudo adduser kimura docker
 fi
 
-echo ### END ###
+echo "### END ###"
