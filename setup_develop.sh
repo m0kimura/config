@@ -29,9 +29,9 @@ fi
 read -p "python 導入しますか? (y/n)" x
 if [ "${x}" = "y" ] ; then
     echo "### atom editor ###"
-    sudo apt-get install build-essential libncursesw5-dev &&
-    libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev &&
-    libssl-dev openssl libbz2-dev libreadline-dev
+    sudo apt-get install build-essential libncursesw5-dev \
+      libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev \
+      libssl-dev openssl libbz2-dev libreadline-dev
     git clone https://github.com/yyuu/pyenv.git ~/.pyenv
     {
       echo "export PYENV_ROOT=\"$HOME/.pyenv\""
