@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ##
 ## setup basic for raspberry pi
 read -p "$0 実行しますか? (y/n)" x
