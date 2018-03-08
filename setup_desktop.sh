@@ -59,4 +59,13 @@ if [ "${x}" = "y" ] ; then
     sudo adduser kimura docker
 fi
 
+
+read -p "x2go(リモート接続クライアント) 設定しますか? (y/n)" x
+if [ "${x}" = "y" ] ; then
+    echo "### x2go ###"
+    sudo apt-add-repository ppa:x2go/stable
+    sudo apt update
+    sudo apt install -y x2goclientfi
+fi
+
 echo "### END ###"
