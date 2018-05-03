@@ -1,9 +1,27 @@
 #!/bin/sh
 #
 #
-sudo apt-get update
-sudo apt-get install docker.io
-sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
+echo "##"
+echo "## nodejs 8.9.4 LTS ###"
+echo "##"
+  sudo  apt-get install -y nodejs npm
+  sudo  npm cache clean
+  sudo  npm install n -g
+  sudo  n 8.9.4
+  sudo  ln -sf /usr/local/bin/node /usr/bin/node
+  sudo  npm install forever -g
+
+echo "##"
+echo "## docker"
+echo "##"
+  sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  sudo apt-get update
+  sudo apt-get -y install docker-ce
+  sudo adduser ubuntu docker
+  sudo usermod -g docker ubuntu
+  sudo /bin/systemctl restart docker.service
 echo "##1"
 sudo service start docker
 echo "##2"
