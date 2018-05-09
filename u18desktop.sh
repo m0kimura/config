@@ -26,8 +26,7 @@ echo "##"
 echo "##"
 echo "## cairo-dock"
 echo "##"
-  sudo apt-get -y install cairo-dock
-
+  sudo apt-get -y install cairo-dock cairo-dock-gnome-integration-plug-in
 echo "##"
 echo "## atom"
 echo "##"
