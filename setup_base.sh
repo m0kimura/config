@@ -52,6 +52,18 @@ if [ "${x}" = "y" ] ; then
   sudo pip install awscli
 fi
 
+read -p "Docker 設定しますか? (y/n)" x
+if [ "${x}" = "y" ] ; then
+  echo "### Docker ###"
+  sudo apt update
+  sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  sudo apt update
+  sudo apt -y install docker-ce
+  sudo adduser $USER docker
+  sudo systemctl status docker
+fi
 
 echo /##
 echo /##
