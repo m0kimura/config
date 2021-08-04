@@ -63,6 +63,7 @@ if [ "${x}" = "y" ] ; then
   sudo apt -y install docker-ce
   sudo adduser $USER docker
   sudo systemctl status docker
+  sudo apt -y install docker-compose
 fi
 
 echo /##
